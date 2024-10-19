@@ -68,7 +68,7 @@ const CardDialog = (props: Props): JSX.Element => {
             props.cardId,
             board.id,
             card.fields.isTemplate,
-            intl.formatMessage({id: 'Mutator.new-template-from-card', defaultMessage: 'new template from card'}),
+            intl.formatMessage({id: 'Mutator.new-template-from-card', defaultMessage: 'Nuevo Template de Card'}),
             true,
             {},
             async (newCardId) => {
@@ -85,13 +85,13 @@ const CardDialog = (props: Props): JSX.Element => {
             return
         }
         TelemetryClient.trackEvent(TelemetryCategory, TelemetryActions.DeleteCard, {board: props.board.id, view: props.activeView.id, card: card.id})
-        await mutator.deleteBlock(card, 'delete card')
+        await mutator.deleteBlock(card, 'Eliminar Card')
         props.onClose()
     }
 
     const confirmDialogProps: ConfirmationDialogBoxProps = {
-        heading: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-heading', defaultMessage: 'Confirm card delete!'}),
-        confirmButtonText: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-button-text', defaultMessage: 'Delete'}),
+        heading: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-heading', defaultMessage: 'Confirmar Eliminado!'}),
+        confirmButtonText: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-button-text', defaultMessage: 'Eliminar'}),
         onConfirm: handleDeleteCard,
         onClose: () => {
             setShowConfirmationDialogBox(false)
@@ -124,7 +124,7 @@ const CardDialog = (props: Props): JSX.Element => {
                         <CompassIcon
                             icon='plus'
                         />}
-                    name='New template from card'
+                    name='Nuevo template de Card'
                     onClick={makeTemplateClicked}
                 />
             </BoardPermissionGate>

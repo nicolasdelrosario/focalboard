@@ -208,3 +208,87 @@
         }
     }
 }
+
+
+.Button {
+    color: #f7ffff !important;
+    background: #273238 !important;
+
+    &:hover {
+        background: #202938 !important;
+    }
+
+    span {
+        color: #f7ffff !important;
+    }
+}
+
+.DateRange .Button {
+    background: #f7ffff !important;
+    color: #273238 !important;
+    font-weight: 500 !important;
+
+    span {
+        color: #273238 !important;
+    }
+}
+
+.MenuWrapper {
+    font-weight: 500 !important;
+}
+
+.MenuWrapper .Button {
+    color: #273238 !important;
+    background: transparent !important;
+
+    span {
+        color: #273238 !important;
+        font-weight: 500 !important;
+    }
+}
+
+.ButtonWithMenu .button-text {
+    color: #f7ffff !important;
+    background: #273238 !important;
+}
+
+.ButtonWithMenu .button-dropdown {
+    color: #f7ffff !important;
+    background: #273238 !important;
+}
+
+.Sidebar {
+    background: #011820 !important;
+}
+
+
+.Switch {
+    background: #273238 !important;
+}
+
+.Kanban .octo-board-header {
+    background: #f1f4f9 !important;
+}
+
+.KanbanCard .octo-icontitle .octo-titletext {
+    font-weight: 500 !important;
+    color: rgb(63, 67, 80) !important;
+}
+
+.Sidebar {
+    padding: 60px 0 12px !important;
+    flex: 0 0 270px !important;
+    max-width: 270px !important;
+
+    .octo-sidebar-list {
+        margin-top: 43px !important;
+    }
+}
+
+.BoardsSwitcher {
+    height: 40px !important;
+}
+
+.Label {
+    text-transform: capitalize !important;
+}

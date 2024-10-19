@@ -125,7 +125,7 @@ function DateFilter(props: Props): JSX.Element {
 
     let buttonText = displayValue
     if (!buttonText) {
-        buttonText = intl.formatMessage({id: 'DateFilter.empty', defaultMessage: 'Empty'})
+        buttonText = intl.formatMessage({id: 'DateFilter.empty', defaultMessage: 'Vacío'})
     }
 
     const className = 'DateFilter'

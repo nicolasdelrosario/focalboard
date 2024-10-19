@@ -14,7 +14,7 @@ import {FlashMessages} from './components/flashMessages'
 import NewVersionBanner from './components/newVersionBanner'
 import {Utils} from './utils'
 import {fetchMe, getMe} from './store/users'
-import {getLanguage, fetchLanguage} from './store/language'
+import {fetchLanguage} from './store/language'
 import {useAppSelector, useAppDispatch} from './store/hooks'
 import {fetchClientConfig} from './store/clientConfig'
 import FocalboardRouter from './router'
@@ -26,7 +26,7 @@ type Props = {
 }
 
 const App = (props: Props): JSX.Element => {
-    const language = useAppSelector<string>(getLanguage)
+    const language = 'es'
     const me = useAppSelector<IUser|null>(getMe)
     const dispatch = useAppDispatch()
 

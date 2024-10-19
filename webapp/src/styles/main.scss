@@ -6,6 +6,7 @@ html {
     height: 100%;
 }
 
+
 .focalboard-body,
 #focalboard-app {
     display: flex;
@@ -15,7 +16,7 @@ html {
     width: 100%;
     height: 100%;
     color: rgb(var(--center-channel-color-rgb));
-    background: rgb(var(--center-channel-bg-rgb));
+    background: #f1f4f9;
     padding: 0;
     margin: 0;
 }
@@ -25,6 +26,7 @@ html {
 }
 
 .focalboard-body {
+    background: #f1f4f9;
     --cursor-color: rgb(var(--center-channel-color-rgb));
 
     padding: 0;
@@ -48,7 +50,8 @@ html {
     textarea,
     select,
     button {
-        font-size: 100%; /* Normalize */
+        font-size: 100%;
+        /* Normalize */
     }
 
     input,
@@ -160,6 +163,18 @@ html {
         }
     }
 
+    .focalboard-body>h1,
+    .focalboard-body>h2,
+    .focalboard-body>h3,
+    .focalboard-body>h4,
+    .focalboard-body>h5,
+    .focalboard-body>h6,
+    .focalboard-body>p,
+    .focalboard-body>i {
+        color: #373737 !important;
+    }
+
+
     /*-- Editable --*/
 
     .Editable {
@@ -214,11 +229,11 @@ html {
             position: relative;
         }
 
-        > * {
+        >* {
             flex: 1 1 auto;
         }
 
-        > .octo-block-margin {
+        >.octo-block-margin {
             flex: 0 0 auto;
         }
 

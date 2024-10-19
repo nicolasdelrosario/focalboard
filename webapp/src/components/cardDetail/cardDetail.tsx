@@ -224,7 +224,7 @@ const CardDetail = (props: Props): JSX.Element|null => {
                     ref={titleRef}
                     className='title'
                     value={title}
-                    placeholderText='Untitled'
+                    placeholderText='Sin Título'
                     onChange={(newTitle: string) => setTitle(newTitle)}
                     saveOnEsc={true}
                     onSave={saveTitle}

@@ -55,22 +55,22 @@ const SidebarSettingsMenu = (props: Props) => {
     const themes = [
         {
             id: defaultThemeName,
-            displayName: 'Default theme',
+            displayName: 'Tema por defecto',
             theme: defaultTheme,
         },
         {
             id: darkThemeName,
-            displayName: 'Dark theme',
+            displayName: 'Tema Oscuro',
             theme: darkTheme,
         },
         {
             id: lightThemeName,
-            displayName: 'Light theme',
+            displayName: 'Tema Claro',
             theme: lightTheme,
         },
         {
             id: systemThemeName,
-            displayName: 'System theme',
+            displayName: 'Tema del Sistema',
             theme: null,
         },
     ]
@@ -81,18 +81,18 @@ const SidebarSettingsMenu = (props: Props) => {
                 <div className='menu-entry'>
                     <FormattedMessage
                         id='Sidebar.settings'
-                        defaultMessage='Settings'
+                        defaultMessage='Ajustes'
                     />
                 </div>
                 <Menu position='top'>
                     <Menu.SubMenu
                         id='import'
-                        name={intl.formatMessage({id: 'Sidebar.import', defaultMessage: 'Import'})}
+                        name={intl.formatMessage({id: 'Sidebar.import', defaultMessage: 'Importar'})}
                         position='top'
                     >
                         <Menu.Text
                             id='import_archive'
-                            name={intl.formatMessage({id: 'Sidebar.import-archive', defaultMessage: 'Import archive'})}
+                            name={intl.formatMessage({id: 'Sidebar.import-archive', defaultMessage: 'Importar Archivo'})}
                             onClick={async () => {
                                 TelemetryClient.trackEvent(TelemetryCategory, TelemetryActions.ImportArchive)
                                 Archiver.importFullArchive()
@@ -114,7 +114,7 @@ const SidebarSettingsMenu = (props: Props) => {
                     </Menu.SubMenu>
                     <Menu.Text
                         id='export'
-                        name={intl.formatMessage({id: 'Sidebar.export-archive', defaultMessage: 'Export archive'})}
+                        name={intl.formatMessage({id: 'Sidebar.export-archive', defaultMessage: 'Exportar Archivo'})}
                         onClick={async () => {
                             if (currentTeam) {
                                 TelemetryClient.trackEvent(TelemetryCategory, TelemetryActions.ExportArchive)
@@ -122,9 +122,9 @@ const SidebarSettingsMenu = (props: Props) => {
                             }
                         }}
                     />
-                    <Menu.SubMenu
+                    {/* <Menu.SubMenu
                         id='lang'
-                        name={intl.formatMessage({id: 'Sidebar.set-language', defaultMessage: 'Set language'})}
+                        name={intl.formatMessage({id: 'Sidebar.set-language', defaultMessage: 'Elegir Idioma'})}
                         position='top'
                     >
                         {
@@ -141,7 +141,7 @@ const SidebarSettingsMenu = (props: Props) => {
                     </Menu.SubMenu>
                     <Menu.SubMenu
                         id='theme'
-                        name={intl.formatMessage({id: 'Sidebar.set-theme', defaultMessage: 'Set theme'})}
+                        name={intl.formatMessage({id: 'Sidebar.set-theme', defaultMessage: 'Elegir Tema'})}
                         position='top'
                     >
                         {
@@ -157,7 +157,7 @@ const SidebarSettingsMenu = (props: Props) => {
                                 ),
                             )
                         }
-                    </Menu.SubMenu>
+                    </Menu.SubMenu> */}
                     <Menu.Switch
                         id='random-icons'
                         name={intl.formatMessage({id: 'Sidebar.random-icons', defaultMessage: 'Random icons'})}

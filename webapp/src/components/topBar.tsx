@@ -4,18 +4,19 @@
 import React from 'react'
 
 import './topBar.scss'
-import {FormattedMessage} from 'react-intl'
 
-import HelpIcon from '../widgets/icons/help'
-import {Constants} from '../constants'
+// import {FormattedMessage} from 'react-intl'
+
+// import HelpIcon from '../widgets/icons/help'
+// import {Constants} from '../constants'
 
 const TopBar = (): JSX.Element => {
-    const focalboardFeedbackUrl = 'https://www.focalboard.com/fwlink/feedback-focalboard.html?v=' + Constants.versionString
+    // const focalboardFeedbackUrl = 'https://www.focalboard.com/fwlink/feedback-focalboard.html?v=' + Constants.versionString
     return (
         <div
             className='TopBar'
         >
-            <a
+            {/* <a
                 className='link'
                 href={focalboardFeedbackUrl}
                 target='_blank'
@@ -32,7 +33,7 @@ const TopBar = (): JSX.Element => {
                 rel='noreferrer'
             >
                 <HelpIcon/>
-            </a>
+            </a> */}
         </div>
     )
 }

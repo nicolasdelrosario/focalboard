@@ -1116,7 +1116,7 @@ class Mutator {
         toTeam?: string,
     ): Promise<BoardsAndBlocks> {
         const asTemplate = false
-        const actionDescription = intl.formatMessage({id: 'Mutator.new-board-from-template', defaultMessage: 'new board from template'})
+        const actionDescription = intl.formatMessage({id: 'Mutator.new-board-from-template', defaultMessage: 'Nuevo Board de Template'})
         return mutator.duplicateBoard(boardTemplateId, actionDescription, asTemplate, afterRedo, beforeUndo, toTeam)
     }
 
@@ -1133,7 +1133,7 @@ class Mutator {
         view.fields.viewType = 'board'
         view.parentId = board.id
         view.boardId = board.id
-        view.title = intl.formatMessage({id: 'View.NewBoardTitle', defaultMessage: 'Board view'})
+        view.title = intl.formatMessage({id: 'View.NewBoardTitle', defaultMessage: 'Vista del Board'})
 
         return mutator.createBoardsAndBlocks(
             {boards: [board], blocks: [view]},
@@ -1156,13 +1156,13 @@ class Mutator {
         const boardTemplate = createBoard()
         boardTemplate.isTemplate = true
         boardTemplate.teamId = teamId
-        boardTemplate.title = intl.formatMessage({id: 'View.NewTemplateDefaultTitle', defaultMessage: 'Untitled Template'})
+        boardTemplate.title = intl.formatMessage({id: 'View.NewTemplateDefaultTitle', defaultMessage: 'Template sin Título'})
 
         const view = createBoardView()
         view.fields.viewType = 'board'
         view.parentId = boardTemplate.id
         view.boardId = boardTemplate.id
-        view.title = intl.formatMessage({id: 'View.NewBoardTitle', defaultMessage: 'Board view'})
+        view.title = intl.formatMessage({id: 'View.NewBoardTitle', defaultMessage: 'Vista del Board'})
 
         return mutator.createBoardsAndBlocks(
             {boards: [boardTemplate], blocks: [view]},

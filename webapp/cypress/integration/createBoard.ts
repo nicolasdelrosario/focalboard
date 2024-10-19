@@ -11,7 +11,7 @@ describe('Create and delete board / card', () => {
         cy.apiResetBoards()
         cy.apiGetMe().then((userID) => cy.apiSkipTour(userID))
         localStorage.setItem('welcomePageViewed', 'true')
-        localStorage.setItem('language', 'en')
+        localStorage.setItem('language', 'es')
     })
 
     it('MM-T4274 Create an Empty Board', () => {

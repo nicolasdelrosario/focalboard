@@ -1,5 +1,5 @@
 .ViewTitle {
-    > div {
+    >div {
         flex: 0 0 auto;
         display: flex;
         flex-direction: row;
@@ -13,7 +13,7 @@
         overflow: auto;
     }
 
-    > .add-buttons {
+    >.add-buttons {
         flex-direction: row;
         color: rgba(var(--center-channel-color-rgb), 0.4);
         width: 100%;
@@ -32,6 +32,7 @@
         .Button {
             display: none;
             line-height: 1;
+            background: #273238;
         }
 
         &.add-visible:hover {
@@ -50,6 +51,8 @@
         flex-grow: 1;
         font-size: 25px;
         line-height: 30px;
+
+        background: #f1f4f9 !important;
     }
 
     >.description>* {

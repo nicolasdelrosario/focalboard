@@ -45,7 +45,7 @@ const CardDetailContentsMenu = () => {
                 <Button>
                     <FormattedMessage
                         id='CardDetail.add-content'
-                        defaultMessage='Add content'
+                        defaultMessage='Añadir Contenido'
                     />
                 </Button>
                 <Menu position='top'>

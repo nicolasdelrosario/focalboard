@@ -164,7 +164,7 @@ function DateRange(props: PropertyProps): JSX.Element {
 
     let buttonText = displayValue
     if (!buttonText && showEmptyPlaceholder) {
-        buttonText = intl.formatMessage({id: 'DateRange.empty', defaultMessage: 'Empty'})
+        buttonText = intl.formatMessage({id: 'DateRange.empty', defaultMessage: 'Vacío'})
     }
 
     const className = props.property.valueClassName(readOnly)

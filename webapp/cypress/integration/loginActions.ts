@@ -7,7 +7,7 @@ describe('Login actions', () => {
     const password = Cypress.env('password')
 
     beforeEach(() => {
-        localStorage.setItem('language', 'en')
+        localStorage.setItem('language', 'es')
     })
 
     it('Can perform login/register actions', () => {

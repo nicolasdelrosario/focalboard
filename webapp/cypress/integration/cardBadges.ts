@@ -7,7 +7,7 @@ describe('Card badges', () => {
         cy.apiResetBoards()
         cy.apiGetMe().then((userID) => cy.apiSkipTour(userID))
         localStorage.setItem('welcomePageViewed', 'true')
-        localStorage.setItem('language', 'en')
+        localStorage.setItem('language', 'es')
     })
 
     it('Shows and hides card badges', () => {
@@ -27,7 +27,7 @@ describe('Card badges', () => {
 
         // Add card description
         cy.log('**Add card description**')
-        cy.findByText('Add a description...').click()
+        cy.findByText('Añade una descripción...').click()
         cy.findByRole('combobox').type('## Header\n- [ ] one\n- [x] two{esc}')
 
         // Add checkboxes

@@ -30,7 +30,7 @@ const EmptyCardButton = (props: Props) => {
         <Menu.Text
             icon={<CardIcon/>}
             id='empty-template'
-            name={intl.formatMessage({id: 'ViewHeader.empty-card', defaultMessage: 'Empty card'})}
+            name={intl.formatMessage({id: 'ViewHeader.empty-card', defaultMessage: 'Card Vacío'})}
             className={currentView.fields.defaultTemplateId ? '' : 'bold-menu-text'}
             onClick={() => {
                 props.addCard()

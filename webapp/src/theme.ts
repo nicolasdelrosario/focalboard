@@ -68,28 +68,28 @@ export const darkThemeName = 'dark-theme'
 export const darkTheme = {
     ...defaultTheme,
 
-    mainBg: '55, 53, 47',
-    mainFg: '220, 220, 220',
-    buttonBg: '80, 170, 221',
-    buttonFg: '255, 255, 255',
-    sidebarBg: '75, 73, 67',
-    sidebarFg: '255, 255, 255',
-    sidebarTextActiveBorder: '102, 185, 167',
-    sidebarWhiteLogo: 'true',
+    // mainBg: '55, 53, 47',
+    // mainFg: '220, 220, 220',
+    // buttonBg: '80, 170, 221',
+    // buttonFg: '255, 255, 255',
+    // sidebarBg: '75, 73, 67',
+    // sidebarFg: '255, 255, 255',
+    // sidebarTextActiveBorder: '102, 185, 167',
+    // sidebarWhiteLogo: 'true',
 
-    link: '#0090ff',
-    linkVisited: 'hsla(270, 68%, 70%, 1.0)',
+    // link: '#0090ff',
+    // linkVisited: 'hsla(270, 68%, 70%, 1.0)',
 
-    propDefault: 'hsla(0, 100%, 100%, 0.08)',
-    propGray: 'hsla(0, 0%, 70%, 0.4)',
-    propBrown: 'hsla(25, 60%, 40%, 0.4)',
-    propOrange: 'hsla(35, 100%, 50%, 0.4)',
-    propYellow: 'hsla(48, 100%, 70%, 0.4)',
-    propGreen: 'hsla(120, 100%, 70%, 0.4)',
-    propBlue: 'hsla(240, 100%, 70%, 0.4)',
-    propPurple: 'hsla(270, 100%, 64%, 0.4)',
-    propPink: 'hsla(310, 100%, 80%, 0.4)',
-    propRed: 'hsla(4, 100%, 70%, 0.4)',
+    // propDefault: 'hsla(0, 100%, 100%, 0.08)',
+    // propGray: 'hsla(0, 0%, 70%, 0.4)',
+    // propBrown: 'hsla(25, 60%, 40%, 0.4)',
+    // propOrange: 'hsla(35, 100%, 50%, 0.4)',
+    // propYellow: 'hsla(48, 100%, 70%, 0.4)',
+    // propGreen: 'hsla(120, 100%, 70%, 0.4)',
+    // propBlue: 'hsla(240, 100%, 70%, 0.4)',
+    // propPurple: 'hsla(270, 100%, 64%, 0.4)',
+    // propPink: 'hsla(310, 100%, 80%, 0.4)',
+    // propRed: 'hsla(4, 100%, 70%, 0.4)',
 }
 
 export const lightThemeName = 'light-theme'
@@ -206,7 +206,7 @@ export function loadTheme(): Theme {
 }
 
 export function initThemes(): void {
-    const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)')
+    const darkThemeMq = window.matchMedia('(prefers-color-scheme: light-theme)')
     const changeHandler = () => {
         const themeStr = UserSettings.theme
         if (!themeStr) {
