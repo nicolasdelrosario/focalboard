@@ -91,14 +91,14 @@ const SidebarUserMenu = () => {
                             })}
                             onClick={async () => {
                                 window.open(
-                                    'https://www.https://letymind.com/',
+                                    'https://letymind.com/',
                                     '_blank',
                                 )
 
                                 // TODO: Review if this is needed in the future, this is to fix the problem with linux webview links
                                 if (window.openInNewBrowser) {
                                     window.openInNewBrowser(
-                                        'https://https://letymind.com/',
+                                        'https://letymind.com/',
                                     )
                                 }
                             }}
