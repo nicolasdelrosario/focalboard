@@ -257,9 +257,6 @@
     background: #273238 !important;
 }
 
-.Sidebar {
-    background: #011820 !important;
-}
 
 
 .Switch {
@@ -275,12 +272,19 @@
     color: rgb(63, 67, 80) !important;
 }
 
+
 .Sidebar {
-    padding: 60px 0 12px !important;
-    flex: 0 0 270px !important;
-    max-width: 270px !important;
+    background: #011820 !important;
+    padding: 60px 18px 12px !important;
+    flex: 0 0 285px !important;
+    max-width: 285px !important;
+
+    .octo-sidebar-header {
+        margin-bottom: 20px !important;
+    }
 
     .octo-sidebar-list {
+        margin-bottom: 28px;
         margin-top: 43px !important;
     }
 }
@@ -290,5 +294,57 @@
 }
 
 .Label {
+    color: #011820 !important;
     text-transform: capitalize !important;
+    font-weight: 500 !important;
+}
+
+.focalboard-body .Editable {
+    background: transparent !important;
+}
+
+.Kanban .octo-board-header-cell .Label .Editable {
+    font-weight: 500 !important;
+    color: #011820 !important;
+}
+
+.BoardsSwitcher {
+    color: #f1f4f9 !important;
+}
+
+.SidebarBoardItem subitem active {
+    color: #f1f4f9 !important;
+}
+
+.SidebarBoardItem:not(.no-views) {
+    color: #f1f4f9 !important;
+}
+
+.SidebarBoardItem.active .octo-sidebar-title {
+    color: #f1f4f9 !important;
+}
+
+.octo-sidebar-title {
+    color: #f1f4f9 !important;
+}
+
+.add-board {
+    color: #f1f4f9 !important;
+}
+
+.menu-entry {
+    color: #f1f4f9 !important;
+}
+
+.focalboard-body a {
+    color: #011820 !important;
+}
+
+.CalendarContainer .fc .fc-toolbar.fc-header-toolbar .fc-button.fc-button-active {
+    background: #011820 !important;
+    color: #f1f4f9 !important;
+}
+
+.CalendarContainer .fc .fc-toolbar.fc-header-toolbar .fc-button {
+    color: #011820 !important;
 }

@@ -97,7 +97,7 @@ const BoardsSwitcher = (): JSX.Element => {
                         title={(
                             <FormattedMessage
                                 id='SidebarCategories.CategoryMenu.CreateNew'
-                                defaultMessage='Create New Category'
+                                defaultMessage='Crear Nueva Categoría'
                             />
                         )}
                     />

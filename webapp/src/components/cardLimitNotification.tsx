@@ -71,7 +71,7 @@ const CardLimitNotification = (props: Props) => {
     let title = intl.formatMessage(
         {
             id: 'notification-box-card-limit-reached.title',
-            defaultMessage: '{cards} cards hidden from board',
+            defaultMessage: '{cards} cards escondidos del board',
         },
         {cards: hiddenCards},
     )
@@ -90,7 +90,7 @@ const CardLimitNotification = (props: Props) => {
         title = intl.formatMessage(
             {
                 id: 'notification-box-cards-hidden.title',
-                defaultMessage: 'This action has hidden another card',
+                defaultMessage: 'Esta acción ha escondido cards',
             },
         )
     }

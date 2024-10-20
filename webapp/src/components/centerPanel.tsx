@@ -282,7 +282,7 @@ const CenterPanel = (props: Props) => {
                 cardTemplateId,
                 board.id,
                 true,
-                intl.formatMessage({id: 'Mutator.new-card-from-template', defaultMessage: 'new card from template'}),
+                intl.formatMessage({id: 'Mutator.new-card-from-template', defaultMessage: 'Nueva card del template'}),
                 false,
                 propertiesThatMeetFilters,
                 async (cardId) => {
@@ -378,7 +378,7 @@ const CenterPanel = (props: Props) => {
                 defaultMessage: 'No {propertyName}',
             }, {propertyName: groupByProperty?.name})
         }
-        return intl.formatMessage({id: 'centerPanel.unknown-user', defaultMessage: 'Unknown user'})
+        return intl.formatMessage({id: 'centerPanel.unknown-user', defaultMessage: 'Usuario desconocido'})
     }
 
     const {visible: visibleGroups, hidden: hiddenGroups} = useMemo(() => {

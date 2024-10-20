@@ -49,14 +49,14 @@ export const CardActionsMenu = (props: Props): JSX.Element => {
                 <Menu.Text
                     icon={<DeleteIcon/>}
                     id='delete'
-                    name={intl.formatMessage({id: 'CardActionsMenu.delete', defaultMessage: 'Delete'})}
+                    name={intl.formatMessage({id: 'CardActionsMenu.delete', defaultMessage: 'Eliminar'})}
                     onClick={handleDeleteCard}
                 />
                 {props.onClickDuplicate &&
                 <Menu.Text
                     icon={<DuplicateIcon/>}
                     id='duplicate'
-                    name={intl.formatMessage({id: 'CardActionsMenu.duplicate', defaultMessage: 'Duplicate'})}
+                    name={intl.formatMessage({id: 'CardActionsMenu.duplicate', defaultMessage: 'Duplicado'})}
                     onClick={handleDuplicateCard}
                 />}
             </BoardPermissionGate>
@@ -64,7 +64,7 @@ export const CardActionsMenu = (props: Props): JSX.Element => {
                 <Menu.Text
                     icon={<LinkIcon/>}
                     id='copy'
-                    name={intl.formatMessage({id: 'CardActionsMenu.copyLink', defaultMessage: 'Copy link'})}
+                    name={intl.formatMessage({id: 'CardActionsMenu.copyLink', defaultMessage: 'Copiar enlace'})}
                     onClick={() => {
                         let cardLink = window.location.href
 
@@ -73,7 +73,7 @@ export const CardActionsMenu = (props: Props): JSX.Element => {
                         }
 
                         Utils.copyTextToClipboard(cardLink)
-                        sendFlashMessage({content: intl.formatMessage({id: 'CardActionsMenu.copiedLink', defaultMessage: 'Copied!'}), severity: 'high'})
+                        sendFlashMessage({content: intl.formatMessage({id: 'CardActionsMenu.copiedLink', defaultMessage: 'Copiado!'}), severity: 'high'})
                     }}
                 />
             }

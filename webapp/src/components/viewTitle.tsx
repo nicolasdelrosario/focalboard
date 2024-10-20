@@ -55,7 +55,7 @@ const ViewTitle = (props: Props) => {
                     >
                         <FormattedMessage
                             id='TableComponent.add-icon'
-                            defaultMessage='Add icon'
+                            defaultMessage='Añadir icono'
                         />
                     </Button>
                 }
@@ -71,7 +71,7 @@ const ViewTitle = (props: Props) => {
                     >
                         <FormattedMessage
                             id='ViewTitle.hide-description'
-                            defaultMessage='hide description'
+                            defaultMessage='esconder descripción'
                         />
                     </Button>
                 }
@@ -87,7 +87,7 @@ const ViewTitle = (props: Props) => {
                     >
                         <FormattedMessage
                             id='ViewTitle.show-description'
-                            defaultMessage='show description'
+                            defaultMessage='mostrar descripción'
                         />
                     </Button>
                 }
@@ -101,7 +101,7 @@ const ViewTitle = (props: Props) => {
                 <Editable
                     className='title'
                     value={title}
-                    placeholderText={intl.formatMessage({id: 'ViewTitle.untitled-board', defaultMessage: 'Untitled board'})}
+                    placeholderText={intl.formatMessage({id: 'ViewTitle.untitled-board', defaultMessage: 'Board sin título'})}
                     onChange={(newTitle) => setTitle(newTitle)}
                     saveOnEsc={true}
                     onSave={onEditTitleSave}

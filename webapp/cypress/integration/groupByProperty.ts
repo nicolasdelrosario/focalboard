@@ -41,7 +41,7 @@ describe('Group board by different properties', () => {
         // Group by new select property
         cy.log('**Group by new select property**')
         cy.findByRole('button', {name: /Group by:/}).click()
-        cy.findByRole('button', {name: 'Status'}).get('.CheckIcon').should('exist')
+        cy.findByRole('button', {name: 'Estado'}).get('.CheckIcon').should('exist')
         cy.findByRole('button', {name: 'Select'}).click()
         cy.findByTitle(/empty Select property/).contains('No Select')
         cy.get('#mainBoardBody').findByText('Untitled').should('exist')

@@ -152,7 +152,7 @@ const CardDialog = (props: Props): JSX.Element => {
                     const attachmentBlock = createAttachmentBlock(uploadingBlock)
                     attachmentBlock.isUploading = true
                     dispatch(updateAttachments([attachmentBlock]))
-                    sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.upload', defaultMessage: 'Attachment uploading.'}), severity: 'normal'})
+                    sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.upload', defaultMessage: 'Subiendo archivo.'}), severity: 'normal'})
                     const xhr = await octoClient.uploadAttachment(boardId, attachment)
                     if (xhr) {
                         xhr.upload.onprogress = (event) => {
@@ -172,11 +172,11 @@ const CardDialog = (props: Props): JSX.Element => {
                                     const block = createAttachmentBlock()
                                     block.fields.fileId = fileId || ''
                                     block.title = attachment.name
-                                    sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.uploadSuccess', defaultMessage: 'Attachment uploaded successfull.'}), severity: 'normal'})
+                                    sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.uploadSuccess', defaultMessage: 'Archivo subido.'}), severity: 'normal'})
                                     resolve(block)
                                 } else {
                                     removeUploadingAttachment(uploadingBlock)
-                                    sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.failed', defaultMessage: 'Unable to upload the file. Attachment size limit reached.'}), severity: 'normal'})
+                                    sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.failed', defaultMessage: 'No se pudo subir el archivo. El archivo es demasiado grande.'}), severity: 'normal'})
                                 }
                             }
                         }
@@ -195,7 +195,7 @@ const CardDialog = (props: Props): JSX.Element => {
         block.parentId = card.id
         block.boardId = card.boardId
         const typeName = block.type
-        const description = intl.formatMessage({id: 'AttachmentBlock.addElement', defaultMessage: 'add {type}'}, {type: typeName})
+        const description = intl.formatMessage({id: 'AttachmentBlock.addElement', defaultMessage: 'añadir {type}'}, {type: typeName})
         await mutator.insertBlock(block.boardId, block, description)
     }
 
@@ -203,9 +203,9 @@ const CardDialog = (props: Props): JSX.Element => {
         if (!card) {
             return
         }
-        const description = intl.formatMessage({id: 'AttachmentBlock.DeleteAction', defaultMessage: 'delete'})
+        const description = intl.formatMessage({id: 'AttachmentBlock.DeleteAction', defaultMessage: 'eliminar'})
         await mutator.deleteBlock(block, description)
-        sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.delete', defaultMessage: 'Attachment Deleted Successfully.'}), severity: 'normal'})
+        sendFlashMessage({content: intl.formatMessage({id: 'AttachmentBlock.delete', defaultMessage: 'Archivo eliminado corectamente.'}), severity: 'normal'})
     }, [card?.boardId, card?.id, card?.fields.contentOrder])
 
     const attachBtn = (): React.ReactNode => {
@@ -218,7 +218,7 @@ const CardDialog = (props: Props): JSX.Element => {
                     size='medium'
                     onClick={addElement}
                 >
-                    {intl.formatMessage({id: 'CardDetail.Attach', defaultMessage: 'Attach'})}
+                    {intl.formatMessage({id: 'CardDetail.Attach', defaultMessage: 'Adjuntar'})}
                 </Button>
             </BoardPermissionGate>
         )
@@ -237,7 +237,7 @@ const CardDialog = (props: Props): JSX.Element => {
                     <div className='banner'>
                         <FormattedMessage
                             id='CardDialog.editing-template'
-                            defaultMessage="You're editing a template."
+                            defaultMessage='Estás editando un template.'
                         />
                     </div>}
 
@@ -261,7 +261,7 @@ const CardDialog = (props: Props): JSX.Element => {
                     <div className='banner error'>
                         <FormattedMessage
                             id='CardDialog.nocard'
-                            defaultMessage="This card doesn't exist or is inaccessible."
+                            defaultMessage='Esta card no existe o es inaccesible.'
                         />
                     </div>}
             </Dialog>

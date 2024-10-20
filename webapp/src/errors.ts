@@ -47,9 +47,9 @@ function errorDefFromId(id: ErrorId | null): ErrorDef {
 
     switch (id) {
     case ErrorId.TeamUndefined: {
-        errDef.title = intl.formatMessage({id: 'error.team-undefined', defaultMessage: 'Not a valid team.'})
+        errDef.title = intl.formatMessage({id: 'error.team-undefined', defaultMessage: 'No un equipo valido.'})
         errDef.button1Enabled = true
-        errDef.button1Text = intl.formatMessage({id: 'error.back-to-home', defaultMessage: 'Back to Home'})
+        errDef.button1Text = intl.formatMessage({id: 'error.back-to-home', defaultMessage: 'Volver a Home'})
         errDef.button1Redirect = (): string => {
             UserSettings.setLastTeamID(null)
             return window.location.origin
@@ -58,17 +58,17 @@ function errorDefFromId(id: ErrorId | null): ErrorDef {
         break
     }
     case ErrorId.BoardNotFound: {
-        errDef.title = intl.formatMessage({id: 'error.board-not-found', defaultMessage: 'Board not found.'})
+        errDef.title = intl.formatMessage({id: 'error.board-not-found', defaultMessage: 'Board no encontrado.'})
         errDef.button1Enabled = true
-        errDef.button1Text = intl.formatMessage({id: 'error.back-to-team', defaultMessage: 'Back to team'})
+        errDef.button1Text = intl.formatMessage({id: 'error.back-to-team', defaultMessage: 'Volver al equipo'})
         errDef.button1Redirect = '/'
         errDef.button1Fill = true
         break
     }
     case ErrorId.NotLoggedIn: {
-        errDef.title = intl.formatMessage({id: 'error.not-logged-in', defaultMessage: 'Your session may have expired or you\'re not logged in. Log in again to access Boards.'})
+        errDef.title = intl.formatMessage({id: 'error.not-logged-in', defaultMessage: 'Sesión expirada.'})
         errDef.button1Enabled = true
-        errDef.button1Text = intl.formatMessage({id: 'error.go-login', defaultMessage: 'Log in'})
+        errDef.button1Text = intl.formatMessage({id: 'error.go-login', defaultMessage: 'Iniciar sesión'})
         errDef.button1Redirect = '/login'
         errDef.button1Redirect = (params: URLSearchParams): string => {
             const r = params.get('r')
@@ -81,9 +81,9 @@ function errorDefFromId(id: ErrorId | null): ErrorDef {
         break
     }
     case ErrorId.InvalidReadOnlyBoard: {
-        errDef.title = intl.formatMessage({id: 'error.invalid-read-only-board', defaultMessage: 'You don\'t have access to this board. Log in to access Boards.'})
+        errDef.title = intl.formatMessage({id: 'error.invalid-read-only-board', defaultMessage: 'No tienes permiso para ver este tablero.'})
         errDef.button1Enabled = true
-        errDef.button1Text = intl.formatMessage({id: 'error.go-login', defaultMessage: 'Log in'})
+        errDef.button1Text = intl.formatMessage({id: 'error.go-login', defaultMessage: 'Iniciar sesión'})
         errDef.button1Redirect = (): string => {
             return window.location.origin
         }
@@ -91,9 +91,9 @@ function errorDefFromId(id: ErrorId | null): ErrorDef {
         break
     }
     default: {
-        errDef.title = intl.formatMessage({id: 'error.unknown', defaultMessage: 'An error occurred.'})
+        errDef.title = intl.formatMessage({id: 'error.unknown', defaultMessage: 'Un error ocurrió.'})
         errDef.button1Enabled = true
-        errDef.button1Text = intl.formatMessage({id: 'error.back-to-home', defaultMessage: 'Back to Home'})
+        errDef.button1Text = intl.formatMessage({id: 'error.back-to-home', defaultMessage: 'Vuelve a Home'})
         errDef.button1Redirect = '/'
         errDef.button1Fill = true
         errDef.button1ClearHistory = true

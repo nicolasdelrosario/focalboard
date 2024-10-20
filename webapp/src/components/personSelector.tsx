@@ -117,7 +117,7 @@ const PersonSelector = (props: Props): JSX.Element => {
             if (showMe && me) {
                 returnUsers.push({
                     id: me.id,
-                    username: intl.formatMessage({id: 'PersonProperty.me', defaultMessage: 'Me'}),
+                    username: intl.formatMessage({id: 'PersonProperty.me', defaultMessage: 'Yo'}),
                     email: '',
                     nickname: '',
                     firstname: '',
@@ -155,8 +155,8 @@ const PersonSelector = (props: Props): JSX.Element => {
             }
         }
         return [
-            {label: intl.formatMessage({id: 'PersonProperty.board-members', defaultMessage: 'Board members'}), options: usersInsideBoard},
-            {label: intl.formatMessage({id: 'PersonProperty.non-board-members', defaultMessage: 'Not board members'}), options: usersOutsideBoard},
+            {label: intl.formatMessage({id: 'PersonProperty.board-members', defaultMessage: 'Miembros del board'}), options: usersInsideBoard},
+            {label: intl.formatMessage({id: 'PersonProperty.non-board-members', defaultMessage: 'No hay miembros'}), options: usersOutsideBoard},
         ]
     }, [boardUsers, allowAddUsers, boardUsersById, me])
 

@@ -48,7 +48,7 @@ export const ConfirmationDialogBox = (props: Props) => {
                     >
                         <FormattedMessage
                             id='ConfirmationDialog.cancel-action'
-                            defaultMessage='Cancel'
+                            defaultMessage='Cancelar'
                         />
                     </Button>
                     <Button
@@ -62,7 +62,7 @@ export const ConfirmationDialogBox = (props: Props) => {
                         { props.dialogBox.confirmButtonText ||
                         <FormattedMessage
                             id='ConfirmationDialog.confirm-action'
-                            defaultMessage='Confirm'
+                            defaultMessage='Confirmar'
                         />
                         }
                     </Button>

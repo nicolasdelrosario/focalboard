@@ -142,8 +142,8 @@ const CalendarFullView = (props: Props): JSX.Element|null => {
 
     const confirmDialogProps: ConfirmationDialogBoxProps = useMemo(() => {
         return {
-            heading: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-heading', defaultMessage: 'Confirm card delete!'}),
-            confirmButtonText: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-button-text', defaultMessage: 'Delete'}),
+            heading: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-heading', defaultMessage: 'Confirmar la eliminación!'}),
+            confirmButtonText: intl.formatMessage({id: 'CardDialog.delete-confirmation-dialog-button-text', defaultMessage: 'Eliminar'}),
             onConfirm: handleDeleteCard,
             onClose: () => {
                 setShowConfirmationDialogBox(false)
@@ -182,7 +182,7 @@ const CalendarFullView = (props: Props): JSX.Element|null => {
                         <div
                             className='fc-event-title'
                             key='__title'
-                        >{event.title || intl.formatMessage({id: 'CalendarCard.untitled', defaultMessage: 'Untitled'})}</div>
+                        >{event.title || intl.formatMessage({id: 'CalendarCard.untitled', defaultMessage: 'Sin título'})}</div>
                     </div>
                     {visiblePropertyTemplates.map((template) => (
                         <Tooltip
@@ -249,9 +249,9 @@ const CalendarFullView = (props: Props): JSX.Element|null => {
     }), [])
 
     const buttonText = useMemo(() => ({
-        today: intl.formatMessage({id: 'calendar.today', defaultMessage: 'TODAY'}),
-        month: intl.formatMessage({id: 'calendar.month', defaultMessage: 'Month'}),
-        week: intl.formatMessage({id: 'calendar.week', defaultMessage: 'Week'}),
+        today: intl.formatMessage({id: 'calendar.today', defaultMessage: 'Hoy'}),
+        month: intl.formatMessage({id: 'calendar.month', defaultMessage: 'Mes'}),
+        week: intl.formatMessage({id: 'calendar.week', defaultMessage: 'Semana'}),
     }), [])
 
     const dayCellContent = useCallback((args: DayCellContentArg): JSX.Element|null => {

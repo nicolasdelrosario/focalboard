@@ -68,11 +68,11 @@ const CardDetailProperties = (props: Props) => {
 
         const subTextString = intl.formatMessage({
             id: 'CardDetailProperty.property-name-change-subtext',
-            defaultMessage: 'type from "{oldPropType}" to "{newPropType}"',
+            defaultMessage: 'escribe de "{oldPropType}" a "{newPropType}"',
         }, {oldPropType: oldType.displayName(intl), newPropType: newType.displayName(intl)})
 
         setConfirmationDialogBox({
-            heading: intl.formatMessage({id: 'CardDetailProperty.confirm-property-type-change', defaultMessage: 'Confirm property type change'}),
+            heading: intl.formatMessage({id: 'CardDetailProperty.confirm-property-type-change', defaultMessage: 'Confirmar propiedad cambiada'}),
             subText: intl.formatMessage({
                 id: 'CardDetailProperty.confirm-property-name-change-subtext',
                 defaultMessage: 'Are you sure you want to change property "{propertyName}" {customText}? This will affect value(s) across {numOfCards} card(s) in this board, and can result in data loss.',
@@ -83,7 +83,7 @@ const CardDetailProperties = (props: Props) => {
                 numOfCards: affectsNumOfCards,
             }),
 
-            confirmButtonText: intl.formatMessage({id: 'CardDetailProperty.property-change-action-button', defaultMessage: 'Change property'}),
+            confirmButtonText: intl.formatMessage({id: 'CardDetailProperty.property-change-action-button', defaultMessage: 'Cambiar propiedad'}),
             onConfirm: async () => {
                 setShowConfirmationDialog(false)
                 try {
@@ -91,7 +91,7 @@ const CardDetailProperties = (props: Props) => {
                 } catch (err: any) {
                     Utils.logError(`Error Changing Property And Name:${propertyTemplate.name}: ${err?.toString()}`)
                 }
-                sendFlashMessage({content: intl.formatMessage({id: 'CardDetailProperty.property-changed', defaultMessage: 'Changed property successfully!'}), severity: 'high'})
+                sendFlashMessage({content: intl.formatMessage({id: 'CardDetailProperty.property-changed', defaultMessage: 'Propiedad cambiada correctamente!'}), severity: 'high'})
             },
             onClose: () => setShowConfirmationDialog(false),
         })
@@ -103,13 +103,13 @@ const CardDetailProperties = (props: Props) => {
     function onPropertyDeleteSetAndOpenConfirmationDialog(propertyTemplate: IPropertyTemplate) {
         // set ConfirmationDialogBox Props
         setConfirmationDialogBox({
-            heading: intl.formatMessage({id: 'CardDetailProperty.confirm-delete-heading', defaultMessage: 'Confirm delete property'}),
+            heading: intl.formatMessage({id: 'CardDetailProperty.confirm-delete-heading', defaultMessage: 'Confirmar eliminación'}),
             subText: intl.formatMessage({
                 id: 'CardDetailProperty.confirm-delete-subtext',
                 defaultMessage: 'Are you sure you want to delete the property "{propertyName}"? Deleting it will delete the property from all cards in this board.',
             },
             {propertyName: propertyTemplate.name}),
-            confirmButtonText: intl.formatMessage({id: 'CardDetailProperty.delete-action-button', defaultMessage: 'Delete'}),
+            confirmButtonText: intl.formatMessage({id: 'CardDetailProperty.delete-action-button', defaultMessage: 'Eliminar'}),
             onConfirm: async () => {
                 const deletingPropName = propertyTemplate.name
                 setShowConfirmationDialog(false)
@@ -172,12 +172,12 @@ const CardDetailProperties = (props: Props) => {
                         <Button>
                             <FormattedMessage
                                 id='CardDetail.add-property'
-                                defaultMessage='+ Add a property'
+                                defaultMessage='+ Añadir propiedad'
                             />
                         </Button>
                         <Menu>
                             <PropertyTypes
-                                label={intl.formatMessage({id: 'PropertyMenu.selectType', defaultMessage: 'Select property type'})}
+                                label={intl.formatMessage({id: 'PropertyMenu.selectType', defaultMessage: 'Selecciona el tipo de la propiedad'})}
                                 onTypeSelected={async (type) => {
                                     const template: IPropertyTemplate = {
                                         id: Utils.createGuid(IDType.BlockID),

@@ -31,7 +31,7 @@ const NewVersionBanner = () => {
             >
                 <FormattedMessage
                     id='BoardPage.newVersion'
-                    defaultMessage='A new version of Boards is available, click here to reload.'
+                    defaultMessage='Una nueva versión de los boards está disponible.'
                 />
             </a>
         </div>

@@ -261,7 +261,7 @@ const CardDetail = (props: Props): JSX.Element|null => {
                         >
                             <FormattedMessage
                                 id='CardDetial.limited-link'
-                                defaultMessage='Learn more about our plans.'
+                                defaultMessage='Aprende más sobre nuestros planes.'
                             />
                         </a>
                     </p>
@@ -274,7 +274,7 @@ const CardDetail = (props: Props): JSX.Element|null => {
                         emphasis='primary'
                         size='large'
                     >
-                        {intl.formatMessage({id: 'CardDetail.limited-button', defaultMessage: 'Upgrade'})}
+                        {intl.formatMessage({id: 'CardDetail.limited-button', defaultMessage: 'Mejora tu plan'})}
                     </Button>
                 </div>}
 
@@ -341,7 +341,7 @@ const CardDetail = (props: Props): JSX.Element|null => {
                             }
 
                             if (block.contentType === 'text' && block.value === '') {
-                                const description = intl.formatMessage({id: 'ContentBlock.DeleteAction', defaultMessage: 'delete'})
+                                const description = intl.formatMessage({id: 'ContentBlock.DeleteAction', defaultMessage: 'Eliminar'})
 
                                 mutator.deleteBlock(originalContentBlock, description)
                                 return null
@@ -355,7 +355,7 @@ const CardDetail = (props: Props): JSX.Element|null => {
                                 newBlock.title = block.value.value
                                 newBlock.fields = {...newBlock.fields, value: block.value.checked}
                             }
-                            mutator.updateBlock(card.boardId, newBlock, originalContentBlock, intl.formatMessage({id: 'ContentBlock.editCardText', defaultMessage: 'edit card content'}))
+                            mutator.updateBlock(card.boardId, newBlock, originalContentBlock, intl.formatMessage({id: 'ContentBlock.editCardText', defaultMessage: 'Editar contenido de la card'}))
                             return block
                         }}
                         onBlockMoved={async (block: BlockData, beforeBlock: BlockData|null, afterBlock: BlockData|null): Promise<void> => {
@@ -375,11 +375,11 @@ const CardDetail = (props: Props): JSX.Element|null => {
                                     sourceWhere = 'after'
                                 }
                                 if (afterBlock && afterBlock.id) {
-                                    await mutator.moveContentBlock(block.id, afterBlock.id, 'after', sourceBlockId, sourceWhere, intl.formatMessage({id: 'ContentBlock.moveBlock', defaultMessage: 'move card content'}))
+                                    await mutator.moveContentBlock(block.id, afterBlock.id, 'after', sourceBlockId, sourceWhere, intl.formatMessage({id: 'ContentBlock.moveBlock', defaultMessage: 'Mover contenido de la card'}))
                                     return
                                 }
                                 if (beforeBlock && beforeBlock.id) {
-                                    await mutator.moveContentBlock(block.id, beforeBlock.id, 'before', sourceBlockId, sourceWhere, intl.formatMessage({id: 'ContentBlock.moveBlock', defaultMessage: 'move card content'}))
+                                    await mutator.moveContentBlock(block.id, beforeBlock.id, 'before', sourceBlockId, sourceWhere, intl.formatMessage({id: 'ContentBlock.moveBlock', defaultMessage: 'Mover contenido de la card'}))
                                 }
                             }
                         }}

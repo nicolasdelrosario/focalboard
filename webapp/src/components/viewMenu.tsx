@@ -96,7 +96,7 @@ const ViewMenu = (props: Props) => {
 
         TelemetryClient.trackEvent(TelemetryCategory, TelemetryActions.CreateBoardView, {board: board.id, view: activeView.id})
         const view = createBoardView()
-        view.title = intl.formatMessage({id: 'View.NewBoardTitle', defaultMessage: 'Board view'})
+        view.title = intl.formatMessage({id: 'View.NewBoardTitle', defaultMessage: 'Vista del Board'})
         view.fields.viewType = 'board'
         view.boardId = board.id
 
@@ -123,7 +123,7 @@ const ViewMenu = (props: Props) => {
         Utils.log('addview-table')
 
         const view = createBoardView()
-        view.title = intl.formatMessage({id: 'View.NewTableTitle', defaultMessage: 'Table view'})
+        view.title = intl.formatMessage({id: 'View.NewTableTitle', defaultMessage: 'Vista de tabla'})
         view.fields.viewType = 'table'
         view.boardId = board.id
         view.fields.visiblePropertyIds = board.cardProperties.map((o: IPropertyTemplate) => o.id)
@@ -154,7 +154,7 @@ const ViewMenu = (props: Props) => {
         Utils.log('addview-gallery')
 
         const view = createBoardView()
-        view.title = intl.formatMessage({id: 'View.NewGalleryTitle', defaultMessage: 'Gallery view'})
+        view.title = intl.formatMessage({id: 'View.NewGalleryTitle', defaultMessage: 'Vista de galeria'})
         view.fields.viewType = 'gallery'
         view.boardId = board.id
         view.fields.visiblePropertyIds = [Constants.titleColumnId]
@@ -183,7 +183,7 @@ const ViewMenu = (props: Props) => {
         Utils.log('addview-calendar')
 
         const view = createBoardView()
-        view.title = intl.formatMessage({id: 'View.NewCalendarTitle', defaultMessage: 'Calendar view'})
+        view.title = intl.formatMessage({id: 'View.NewCalendarTitle', defaultMessage: 'Vista de calendario'})
         view.fields.viewType = 'calendar'
         view.parentId = board.id
         view.boardId = board.id
@@ -214,15 +214,15 @@ const ViewMenu = (props: Props) => {
 
     const duplicateViewText = intl.formatMessage({
         id: 'View.DuplicateView',
-        defaultMessage: 'Duplicate view',
+        defaultMessage: 'Vista duplicada',
     })
     const deleteViewText = intl.formatMessage({
         id: 'View.DeleteView',
-        defaultMessage: 'Delete view',
+        defaultMessage: 'Vista eliminada',
     })
     const addViewText = intl.formatMessage({
         id: 'View.AddView',
-        defaultMessage: 'Add view',
+        defaultMessage: 'Añadir vista',
     })
     const boardText = intl.formatMessage({
         id: 'View.Board',
@@ -230,11 +230,11 @@ const ViewMenu = (props: Props) => {
     })
     const tableText = intl.formatMessage({
         id: 'View.Table',
-        defaultMessage: 'Table',
+        defaultMessage: 'Tabla',
     })
     const galleryText = intl.formatMessage({
         id: 'View.Gallery',
-        defaultMessage: 'Gallery',
+        defaultMessage: 'Galeria',
     })
 
     const iconForViewType = (viewType: IViewType) => {

@@ -108,44 +108,44 @@ class OctoUtils {
     static filterConditionDisplayString(filterCondition: FilterCondition, intl: IntlShape, filterValueType: string): string {
         if (filterValueType === 'options' || filterValueType === 'person') {
             switch (filterCondition) {
-            case 'includes': return intl.formatMessage({id: 'Filter.includes', defaultMessage: 'includes'})
-            case 'notIncludes': return intl.formatMessage({id: 'Filter.not-includes', defaultMessage: 'doesn\'t include'})
-            case 'isEmpty': return intl.formatMessage({id: 'Filter.is-empty', defaultMessage: 'is empty'})
-            case 'isNotEmpty': return intl.formatMessage({id: 'Filter.is-not-empty', defaultMessage: 'is not empty'})
+            case 'includes': return intl.formatMessage({id: 'Filter.includes', defaultMessage: 'incluye'})
+            case 'notIncludes': return intl.formatMessage({id: 'Filter.not-includes', defaultMessage: 'no incluye'})
+            case 'isEmpty': return intl.formatMessage({id: 'Filter.is-empty', defaultMessage: 'está vacío'})
+            case 'isNotEmpty': return intl.formatMessage({id: 'Filter.is-not-empty', defaultMessage: 'no está vacío'})
             default: {
-                return intl.formatMessage({id: 'Filter.includes', defaultMessage: 'includes'})
+                return intl.formatMessage({id: 'Filter.includes', defaultMessage: 'incluye'})
             }
             }
         } else if (filterValueType === 'boolean') {
             switch (filterCondition) {
-            case 'isSet': return intl.formatMessage({id: 'Filter.is-set', defaultMessage: 'is set'})
-            case 'isNotSet': return intl.formatMessage({id: 'Filter.is-not-set', defaultMessage: 'is not set'})
+            case 'isSet': return intl.formatMessage({id: 'Filter.is-set', defaultMessage: 'establecido'})
+            case 'isNotSet': return intl.formatMessage({id: 'Filter.is-not-set', defaultMessage: 'no establecido'})
             default: {
-                return intl.formatMessage({id: 'Filter.is-set', defaultMessage: 'is set'})
+                return intl.formatMessage({id: 'Filter.is-set', defaultMessage: 'establecido'})
             }
             }
         } else if (filterValueType === 'text') {
             switch (filterCondition) {
-            case 'is': return intl.formatMessage({id: 'Filter.is', defaultMessage: 'is'})
-            case 'contains': return intl.formatMessage({id: 'Filter.contains', defaultMessage: 'contains'})
-            case 'notContains': return intl.formatMessage({id: 'Filter.not-contains', defaultMessage: 'doesn\'t contain'})
-            case 'startsWith': return intl.formatMessage({id: 'Filter.starts-with', defaultMessage: 'starts with'})
-            case 'notStartsWith': return intl.formatMessage({id: 'Filter.not-starts-with', defaultMessage: 'doesn\'t start with'})
-            case 'endsWith': return intl.formatMessage({id: 'Filter.ends-with', defaultMessage: 'ends with'})
-            case 'notEndsWith': return intl.formatMessage({id: 'Filter.not-ends-with', defaultMessage: 'doesn\'t end with'})
+            case 'is': return intl.formatMessage({id: 'Filter.is', defaultMessage: 'es'})
+            case 'contains': return intl.formatMessage({id: 'Filter.contains', defaultMessage: 'contiene'})
+            case 'notContains': return intl.formatMessage({id: 'Filter.not-contains', defaultMessage: 'no contiene'})
+            case 'startsWith': return intl.formatMessage({id: 'Filter.starts-with', defaultMessage: 'empieza con'})
+            case 'notStartsWith': return intl.formatMessage({id: 'Filter.not-starts-with', defaultMessage: 'no empieza con'})
+            case 'endsWith': return intl.formatMessage({id: 'Filter.ends-with', defaultMessage: 'termina con'})
+            case 'notEndsWith': return intl.formatMessage({id: 'Filter.not-ends-with', defaultMessage: 'no termina con'})
             default: {
-                return intl.formatMessage({id: 'Filter.is', defaultMessage: 'is'})
+                return intl.formatMessage({id: 'Filter.is', defaultMessage: 'es'})
             }
             }
         } else if (filterValueType === 'date') {
             switch (filterCondition) {
-            case 'is': return intl.formatMessage({id: 'Filter.is', defaultMessage: 'is'})
-            case 'isBefore': return intl.formatMessage({id: 'Filter.is-before', defaultMessage: 'is before'})
-            case 'isAfter': return intl.formatMessage({id: 'Filter.is-after', defaultMessage: 'is after'})
-            case 'isSet': return intl.formatMessage({id: 'Filter.is-set', defaultMessage: 'is set'})
-            case 'isNotSet': return intl.formatMessage({id: 'Filter.is-not-set', defaultMessage: 'is not set'})
+            case 'is': return intl.formatMessage({id: 'Filter.is', defaultMessage: 'es'})
+            case 'isBefore': return intl.formatMessage({id: 'Filter.is-before', defaultMessage: 'es antes de'})
+            case 'isAfter': return intl.formatMessage({id: 'Filter.is-after', defaultMessage: 'es después de'})
+            case 'isSet': return intl.formatMessage({id: 'Filter.is-set', defaultMessage: ' establecido'})
+            case 'isNotSet': return intl.formatMessage({id: 'Filter.is-not-set', defaultMessage: 'no establecido'})
             default: {
-                return intl.formatMessage({id: 'Filter.is', defaultMessage: 'is'})
+                return intl.formatMessage({id: 'Filter.is', defaultMessage: 'es de'})
             }
             }
         } else {

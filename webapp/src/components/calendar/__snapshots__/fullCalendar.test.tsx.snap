@@ -126,7 +126,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Sunday"
+                                  aria-label="Domingo"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Sun
@@ -141,7 +141,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Monday"
+                                  aria-label="Lunes"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Mon
@@ -156,7 +156,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Tuesday"
+                                  aria-label="Martes"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Tue
@@ -171,7 +171,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Wednesday"
+                                  aria-label="Miércoles"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Wed
@@ -186,7 +186,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Thursday"
+                                  aria-label="Jueves"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Thu
@@ -201,7 +201,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Friday"
+                                  aria-label="Viernes"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Fri
@@ -216,7 +216,7 @@ exports[`components/calendar/toolbar return calendar, no date property 1`] = `
                                 class="fc-scrollgrid-sync-inner"
                               >
                                 <a
-                                  aria-label="Saturday"
+                                  aria-label="Sábado"
                                   class="fc-col-header-cell-cushion "
                                 >
                                   Sat

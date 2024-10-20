@@ -87,11 +87,11 @@ const CardBadges = (props: Props) => {
     return (
         <div className={`CardBadges ${className || ''}`}>
             {badges.description &&
-                <span title={intl.formatMessage({id: 'CardBadges.title-description', defaultMessage: 'This card has a description'})}>
+                <span title={intl.formatMessage({id: 'CardBadges.title-description', defaultMessage: 'Esta card tiene una descripción'})}>
                     <TextIcon/>
                 </span>}
             {badges.comments > 0 &&
-                <span title={intl.formatMessage({id: 'CardBadges.title-comments', defaultMessage: 'Comments'})}>
+                <span title={intl.formatMessage({id: 'CardBadges.title-comments', defaultMessage: 'Comentarios'})}>
                     <MessageIcon/>
                     {badges.comments}
                 </span>}
